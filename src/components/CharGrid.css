@@ -1,0 +1,29 @@
+.charBox {
+  width: 40px;
+  padding: 5px;
+  border-color: red;
+  border-width: 0px;
+  text-align: center;
+
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.charBox-selected {
+  width: 40px;
+  padding: 5px;
+
+  border-color: #5788a8;
+  border-width: 0px;
+  background-color: rgb(222, 242, 255);
+
+  text-align: center;
+
+  cursor: pointer;
+  font-size: x-large;
+}
+
+::selection {
+  color: black;
+  background: rgb(222, 242, 255);
+}
