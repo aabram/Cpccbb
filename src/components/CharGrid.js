@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import "./CharGrid.css";
 import {
   Accordion,
   AccordionButton,
@@ -12,8 +12,8 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import {sets} from "../Sets.json";
-import "./CharGrid.css";
+import React, { useEffect, useState } from "react";
+import { sets } from "../Sets.json";
 
 function CharGrid() {
   const defaultArray = sets[0].content;
@@ -27,8 +27,8 @@ function CharGrid() {
 
   useEffect(() => {
     let userLastSet = localStorage.getItem("lastSet") ? localStorage.getItem("lastSet") : defaultSet;
-    setActiveSet(sets.find(x => x.name === userLastSet).name);
-    setActiveArray(sets.find(x => x.name === userLastSet).content);
+    setActiveSet(sets.find((x) => x.name === userLastSet).name);
+    setActiveArray(sets.find((x) => x.name === userLastSet).content);
   }, [defaultSet]);
 
   function Buttons() {
@@ -83,15 +83,15 @@ function CharGrid() {
         </Box>
         <Accordion width={maxWidth} allowToggle mb="10px">
           <AccordionItem mb="10px" borderTop="1px dashed" borderBottom="1px dashed">
-            <AccordionButton _expanded={{bg: "rgb(248, 248, 248)"}}>
+            <AccordionButton _expanded={{ bg: "rgb(248, 248, 248)" }}>
               <Box flex="1" textAlign="center">
                 {activeSet}
               </Box>
-              <AccordionIcon/>
+              <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
               <Box>
-                <Buttons/>
+                <Buttons />
               </Box>
             </AccordionPanel>
           </AccordionItem>
@@ -100,7 +100,7 @@ function CharGrid() {
           {activeArray.map((value, index) => (
             <WrapItem key={index}>
               <Center h="40px" bg="green.200">
-                <input className="charBox" type="text" id={index} value={value} readOnly onClick={select}/>
+                <input className="charBox" type="text" id={index} value={value} readOnly onClick={select} />
               </Center>
             </WrapItem>
           ))}
