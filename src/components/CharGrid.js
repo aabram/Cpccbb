@@ -18,7 +18,7 @@ import { sets } from "../Sets.json";
 function CharGrid() {
   const defaultArray = sets[0].content;
   const defaultSet = sets[0].name;
-  const maxWidth = "700px";
+  const maxWidth = "80vw";
 
   const [activeArray, setActiveArray] = useState(defaultArray);
   const [activeSet, setActiveSet] = useState(defaultSet);
