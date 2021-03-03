@@ -4,4 +4,6 @@
 
 I used to love the original CPC, it was my go-to place for copying characters that I needed sometimes, but not often enough to remember the codes or to bother creating my own copy sheet of it. Now that CPC has been abandoned for some time already, I created **Cpccbb**.
 
+Live demo: [https://eatmorepancakes.com/cpccbb/](https://eatmorepancakes.com/cpccbb/)
+
 ![cpccbb interface](README.assets/cpccbb.png)
