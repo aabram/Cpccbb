@@ -32,6 +32,7 @@ function CharGrid() {
   }, [defaultSet]);
 
   function Buttons() {
+    
     const buttons = sets.map((set, index) => (
       <WrapItem key={index}>
         <Button
@@ -54,6 +55,7 @@ function CharGrid() {
         </Button>
       </WrapItem>
     ));
+
     return (
       <Wrap mt="15px" spacing="15px" justify="center">
         {buttons}
